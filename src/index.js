@@ -45,13 +45,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
             console.log("Player 1:", player_1, "\nPlayer 2:", player_2);
 
-            // Check for winner
+            // Check for winner    to see if it is a draw or a win
             let winner = checkWinner(player_1, player_2);
             if (winner) {
-                statusText.textContent = `Player ${winner} Wins!`;
+                statusText.textContent = `Player ${winner} Wins!`; // display the which player is the winner
                 disableBoard();
             } else if (player_1.length + player_2.length === 9) {
-                statusText.textContent = "It's a Draw!";
+                statusText.textContent = "It's a Draw!";   // display its a draw if the tile is full and no winner has been found
             }
         });
     });
@@ -74,10 +74,10 @@ document.addEventListener("DOMContentLoaded", () => {
     // Function to check winner
     function checkWinner(player1, player2) {
         for (let combo of winningCombos) {
-            if (combo.every(num => player1.includes(num))) {
+            if (combo.every(num => player1.includes(num))) {       // if player_1 has reached the winning combo player 1 win
                 return "X"; // Player 1 wins
             }
-            if (combo.every(num => player2.includes(num))) {
+            if (combo.every(num => player2.includes(num))) {     // if player_2 has reached the winning combo player 2 win
                 return "O"; // Player 2 wins
             }
         }
@@ -86,6 +86,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Disable board after a win
     function disableBoard() {
-        cellItems.forEach(cell => cell.classList.add("disabled"));
+        cellItems.forEach(cell => cell.classList.add("disabled"));   // if winning combo has been reached before the board is full the remaining tiles is locked/disabled and cannot be clicked on
     }
 });
