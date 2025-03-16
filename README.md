@@ -29,7 +29,7 @@ The project automatically runs once loaded.
 
 
 ## Github pages link found here
-The github pages link is found here in: [Github pages](https://jeraldnyaga.github.io/group7TicTacToe/)
+The github pages link is found here in: [Github pages](https://jeraldnyaga.github.io/group-7-Tic-Tac-Toe/)
 
 ### License
 MIT License
